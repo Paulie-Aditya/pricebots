@@ -17,35 +17,11 @@ import time
 
 _status = {}
 
-number_of_bots = 32
+
 #bot_info = {"Coin Name: [Change_in_price, Mcap, ]"}
 bot_info = {}
-["Algo", "Ape", "Atom","Avax","Banano","Bch","Bitcoin","BNB","Cake","Cardano","Chainlink","Cronos",]
-change_in_price_bitcoin = 0
-change_in_price_bnb = 0
-change_in_price_cake = 0
-change_in_price_cardano = 0
-change_in_price_chainlink= 0
-change_in_price_cronos = 0
-change_in_price_dogecoin= 0
-change_in_price_eos = 0
-change_in_price_ethereum = 0
-change_in_price_litecoin= 0
-change_in_price_mana= 0
-change_in_price_matic= 0
-change_in_price_monero= 0
-change_in_price_polkadot= 0
-change_in_price_sand = 0
-change_in_price_shiba= 0
-change_in_price_solana = 0
-change_in_price_tezos = 0
-change_in_price_trx= 0
-change_in_price_uniswap= 0
-change_in_price_xlm= 0
-change_in_price_xrp = 0
-change_in_price_nano = 0
-change_in_price_kaspa = 0
-change_in_price_bat = 0
+bots= ["Algo", "Ape", "Atom","Avax","Banano","Bch","Bitcoin","BNB","Cake","Cardano","Chainlink","Cronos","Dogecoin","Eos","Ethereum","Litecoin","Mana","Matic","Monero","Polkadot","Sand","Shiba","Solana","Tezos","Trx","Uniswap","Xlm","Xrp","Nano","Kaspa","Bat"]
+number_of_bots = 32
 mcap_algo= 0
 mcap_ape= 0
 mcap_atom= 0
