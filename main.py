@@ -31,7 +31,7 @@ for i in range(number_of_bots):
 
 changing_nick_in_time = 100
 
-
+convert = {}
 
 def fetching_status():
     global _status
