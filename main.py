@@ -38,26 +38,29 @@ def fetching_status():
     _status.update(cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True))
 
     for j in range(number_of_bots):
+        crypto= bot_info[bots[j]]
+        crypto["Change"] = round(float(_status[ids[j]]["usd_24h_change"]),2)
+        crypto["Mcap"] = f'{(round(int(_status[ids[j]]["usd_market_cap"]),0)):,}'
+        crypto["Dailyvol"] = f'{(round(int(_status[ids[j]]["usd_24h_vol"]),0)):,}'
 
-        bot_info[bots[j]["Change"]] = round(float(_status[ids[j]]["usd_24h_change"]),2)
-        bot_info[bots[j]["Mcap"]] = f'{(round(int(_status[ids[j]]["usd_market_cap"]),0)):,}'
-        bot_info[bots[j]["Dailyvol"]] = f'{(round(int(_status[ids[j]]["usd_24h_vol"]),0)):,}'
-        if bot_info[bots[j]["Change"]]  > 0:
-            bot_info[bots[j]["Up_or_down"]] = "+"
-        elif bot_info[bots[j]["Change"]] < 0:
-            bot_info[bots[j]["Up_or_down"]] = "\u200b"
-        if bots[j] != "Kaspa":
-            bot_info[bots[j]["a1"]] = f'{"24h Change:"} {bot_info[bots[j]["Up_or_down"]]}{bot_info[bots[j]["Change"]]}{"%"}'
-            bot_info[bots[j]["a2"]] = f'{"Market Cap: "}{"$"}{bot_info[bots[j]["Mcap"]]}'
-            bot_info[bots[j]["a3"]] = f'{"24h Vol: "}{"$"}{bot_info[bots[j]["Dailyvol"]]}'
+        if crypto["Change"] > 0:
+            crypto["Up_or_down"] = "+"
+        elif crypto["Change"] < 0:
+            crypto["Up_or_down"] = "\u200b"
+
+        if bots[j] == "Kaspa":
+            bot_info[bots[j]["a1"]] = f'{"🍅 24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
+            bot_info[bots[j]["a2"]] = f'{"🍅 Market Cap: "}{"$"}{crypto["Mcap"]}'
+            bot_info[bots[j]["a3"]] = f'{"🍅 24h Vol: "}{"$"}{crypto["Dailyvol"]}'
         else:
-            bot_info[bots[j]["a1"]] = f'{"🍅 24h Change:"} {bot_info[bots[j]["Up_or_down"]]}{bot_info[bots[j]["Change"]]}{"%"}'
-            bot_info[bots[j]["a2"]] = f'{"🍅 Market Cap: "}{"$"}{bot_info[bots[j]["Mcap"]]}'
-            bot_info[bots[j]["a3"]] = f'{"🍅 24h Vol: "}{"$"}{bot_info[bots[j]["Dailyvol"]]}'
+            bot_info[bots[j]["a1"]] = f'{"24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
+            bot_info[bots[j]["a2"]] = f'{"Market Cap: "}{"$"}{crypto["Mcap"]}'
+            bot_info[bots[j]["a3"]] = f'{"24h Vol: "}{"$"}{crypto["Dailyvol"]}'
 
 def start():
     y= cg.get_price(ids = ids, vs_currencies="usd")
-
+    for t in range(number_of_bots):
+        bots[t][]
 
 
     new_price_algo = y["algorand"]["usd"]
