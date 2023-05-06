@@ -8,7 +8,7 @@ import asyncio
 import random
 
 bot_algo= bot_ape= bot_atom= bot_avax= bot_banano= bot_bch = bot_bitcoin= bot_bnb= bot_cake= bot_cardano = bot_chainlink= bot_cronos = bot_dogecoin= bot_eos= bot_eth= discord.Bot()
-bot_litecoin = bot_mana = bot_matic = bot_monero = bot_polkadot= bot_sand= bot_shiba = bot_solana= bot_tezos= bot_trx= bot_uniswap= bot_xlm= bot_xrp = bot_nano = bot_bat = bot_kaspa = discord.Bot()
+bot_litecoin = bot_mana = bot_matic = bot_monero = bot_polkadot= bot_sand= bot_solana= bot_tezos= bot_trx= bot_uniswap= bot_xlm= bot_xrp = bot_nano = bot_bat = bot_kaspa = discord.Bot()
 
 
 #pip install schedule
@@ -19,10 +19,10 @@ _status = {}
 
 
 
-bots= ["Algo", "Ape", "Atom","Avax","Banano","Bch","Bitcoin","BNB","Cake","Cardano","Chainlink","Cronos","Dogecoin","Eos","Ethereum","Litecoin","Mana","Matic","Monero","Polkadot","Sand","Shiba","Solana","Tezos","Trx","Uniswap","Xlm","Xrp","Nano","Kaspa","Bat"]
+bots= ["Algo", "Ape", "Atom","Avax","Banano","Bch","Bitcoin","BNB","Cake","Cardano","Chainlink","Cronos","Dogecoin","Eos","Ethereum","Litecoin","Mana","Matic","Monero","Polkadot","Sand","Solana","Tezos","Trx","Uniswap","Xlm","Xrp","Nano","Kaspa","Bat"]
 number_of_bots = len(bots)
 
-#bot_info = {"Coin Name: [Change_in_price, Mcap, ]"}
+
 bot_info = {}
 
 for i in range(number_of_bots):
