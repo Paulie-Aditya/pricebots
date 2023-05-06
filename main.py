@@ -18,7 +18,6 @@ import time
 _status = {}
 
 
-
 bots= ["Algo", "Ape", "Atom","Avax","Banano","Bch","Bitcoin","BNB","Cake","Cardano","Chainlink","Cronos","Dogecoin","Eos","Ethereum","Litecoin","Mana","Matic","Monero","Polkadot","Sand","Solana","Tezos","Trx","Uniswap","Xlm","Xrp","Nano","Kaspa","Bat"]
 number_of_bots = len(bots)
 
@@ -26,23 +25,20 @@ number_of_bots = len(bots)
 bot_info = {}
 
 for i in range(number_of_bots):
-    bot_info.update({bots[i]:{"Change":0,"Mcap":0,"Dailyvol":0,"Up_or_down":"","a1":"","a2":"","a3":"","Arrow":"","old_price":[0,0]}})
+    bot_info.update({bots[i]:{"Change":0,"Mcap":0,"Dailyvol":0,"Up_or_down":"","a1":"","a2":"","a3":"","Arrow":"","old_price":[0,0],"new_price":0}})
 
 
 changing_nick_in_time = 100
 
 convert = {}
-ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","shiba-inu","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
+ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
 
 for t in range(number_of_bots):
     convert.update({bots[t]:ids[t]})
 
-
-
 def fetching_status():
-    global _status,ids,convert
 
-    _status = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
+    _status.update(cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True))
 
     for j in range(number_of_bots):
 
@@ -61,10 +57,10 @@ def fetching_status():
             bot_info[bots[j]["a1"]] = f'{"🍅 24h Change:"} {bot_info[bots[j]["Up_or_down"]]}{bot_info[bots[j]["Change"]]}{"%"}'
             bot_info[bots[j]["a2"]] = f'{"🍅 Market Cap: "}{"$"}{bot_info[bots[j]["Mcap"]]}'
             bot_info[bots[j]["a3"]] = f'{"🍅 24h Vol: "}{"$"}{bot_info[bots[j]["Dailyvol"]]}'
+
 def start():
-    y= cg.get_price(ids = ["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","shiba-inu","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"], vs_currencies="usd")
-    global new_price_algo, new_price_ape, new_price_atom, new_price_avax ,new_price_banano,new_price_bch,new_price_bitcoin,new_price_bnb,new_price_cake,new_price_cardano,new_price_chainlink,new_price_cronos,new_price_dogecoin,new_price_eos,new_price_ethereum,new_price_litecoin,new_price_mana,new_price_matic,new_price_monero,new_price_polkadot,new_price_sand,new_price_solana,new_price_tezos,new_price_trx,new_price_uniswap,new_price_xlm,new_price_xrp, new_price_kaspa
-    global new_price_nano , new_price_bat
+    y= cg.get_price(ids = ids, vs_currencies="usd")
+
 
 
     new_price_algo = y["algorand"]["usd"]
