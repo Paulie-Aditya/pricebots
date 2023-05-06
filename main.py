@@ -35,7 +35,7 @@ convert = {}
 ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","shiba-inu","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
 
 for t in range(number_of_bots):
-    convert.update({bots[i]:ids[i]})
+    convert.update({bots[t]:ids[t]})
 
 
 
@@ -43,6 +43,19 @@ def fetching_status():
     global _status,ids,convert
 
     _status = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
+
+    for j in range(number_of_bots):
+        bot_info[bots[j]["Change"]] = round(float(_status[convert[bots[j]]]["usd_24h_change"]),2)
+        bot_info[bots[j]["Mcap"]] = f'{(round(int(_status[convert[bots[j]]]["usd_market_cap"]),0)):,}'
+        bot_info[bots[j]["Dailyvol"]] = f'{(round(int(_status[convert[bots[j]]]["usd_24h_vol"]),0)):,}'
+        if bot_info[bots[j]["Change"]]  > 0:
+            bot_info[bots[j]["Up_or_down"]] = "+"
+        elif bot_info[bots[j]["Change"]] < 0:
+            bot_info[bots[j]["Up_or_down"]] = "\u200b"
+        bot_info[bots[j]["a1"]] = f'{"24h Change:"} {bot_info[bots[j]["Up_or_down"]]}{bot_info[bots[j]["Change"]]}{"%"}'
+        bot_info[bots[j]["a2"]] = f'{"Market Cap: "}{"$"}{bot_info[bots[j]["Mcap"]]}'
+        bot_info[bots[j]["a3"]] = f'{"24h Vol: "}{"$"}{bot_info[bots[j]["Dailyvol"]]}'
+
 
     change_in_price_algo = round(float(_status["algorand"]["usd_24h_change"]),2)
     mcap_algo = f'{(round(int(_status["algorand"]["usd_market_cap"]),0)):,}'
