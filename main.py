@@ -30,11 +30,8 @@ for i in range(number_of_bots):
 
 changing_nick_in_time = 100
 
-convert = {}
 ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
 
-for t in range(number_of_bots):
-    convert.update({bots[t]:ids[t]})
 
 def fetching_status():
 
@@ -42,9 +39,9 @@ def fetching_status():
 
     for j in range(number_of_bots):
 
-        bot_info[bots[j]["Change"]] = round(float(_status[convert[bots[j]]]["usd_24h_change"]),2)
-        bot_info[bots[j]["Mcap"]] = f'{(round(int(_status[convert[bots[j]]]["usd_market_cap"]),0)):,}'
-        bot_info[bots[j]["Dailyvol"]] = f'{(round(int(_status[convert[bots[j]]]["usd_24h_vol"]),0)):,}'
+        bot_info[bots[j]["Change"]] = round(float(_status[ids[j]]["usd_24h_change"]),2)
+        bot_info[bots[j]["Mcap"]] = f'{(round(int(_status[ids[j]]["usd_market_cap"]),0)):,}'
+        bot_info[bots[j]["Dailyvol"]] = f'{(round(int(_status[ids[j]]["usd_24h_vol"]),0)):,}'
         if bot_info[bots[j]["Change"]]  > 0:
             bot_info[bots[j]["Up_or_down"]] = "+"
         elif bot_info[bots[j]["Change"]] < 0:
