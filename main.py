@@ -60,52 +60,15 @@ def fetching_status():
 def start():
     y= cg.get_price(ids = ids, vs_currencies="usd")
     for t in range(number_of_bots):
-        bots[t][]
+        crypto= bot_info[bots[t]]
+        crypto["new_price"] = y[ids[t]]["usd"]
 
-
-    new_price_algo = y["algorand"]["usd"]
-    new_price_ape = y["apecoin"]["usd"]
-    new_price_atom =y["cosmos"]["usd"]
-    new_price_avax = y["avalanche-2"]["usd"]
-    new_price_banano =y["banano"]["usd"]
-    new_price_bch =y["bitcoin-cash"]["usd"]
-    new_price_bitcoin =y["bitcoin"]["usd"]
-    new_price_bnb =y["binancecoin"]["usd"]
-    new_price_cake =y["pancakeswap-token"]["usd"]
-    new_price_cardano =y["cardano"]["usd"]
-    new_price_chainlink =y["chainlink"]["usd"]
-    new_price_cronos =y["crypto-com-chain"]["usd"]
-    new_price_dogecoin =y["dogecoin"]["usd"]
-    new_price_eos =y["eos"]["usd"]
-    new_price_ethereum =y["ethereum"]["usd"]
-    new_price_litecoin =y["litecoin"]["usd"]
-    new_price_mana =y["decentraland"]["usd"]
-    new_price_matic =y["matic-network"]["usd"]
-    new_price_monero =y["monero"]["usd"]
-    new_price_polkadot =y["polkadot"]["usd"]
-    new_price_sand =y["the-sandbox"]["usd"]
-    #new_price_shiba =y["shiba-inu"]["usd"]
-    new_price_solana =y["solana"]["usd"]
-    new_price_tezos =y["tezos"]["usd"]
-    new_price_trx =y["tron"]["usd"]
-    new_price_uniswap =y["uniswap"]["usd"]
-    new_price_xlm =y["stellar"]["usd"]
-    new_price_xrp =y["ripple"]["usd"]
-    new_price_kaspa = y["kaspa"]["usd"]
-    new_price_nano = y["nano"]["usd"]
-    new_price_bat = y["basic-attention-token"]["usd"]
-
-
-
-    global old_price_algo, old_price_ape, old_price_atom, old_price_avax ,old_price_banano,old_price_bch,old_price_bitcoin,old_price_bnb,old_price_cake,old_price_cardano,old_price_chainlink,old_price_cronos,old_price_dogecoin,old_price_eos,old_price_ethereum,old_price_litecoin,old_price_mana,old_price_matic,old_price_monero,old_price_polkadot,old_price_sand,old_price_shiba,old_price_solana,old_price_tezos,old_price_trx,old_price_uniswap,old_price_xlm,old_price_xrp, old_price_kaspa,old_price_bat,_arrow_algo, _arrow_ape, _arrow_atom, _arrow_avax ,_arrow_banano,_arrow_bch,_arrow_bitcoin,_arrow_bnb,_arrow_cake,_arrow_cardano,_arrow_chainlink,_arrow_cronos,_arrow_dogecoin,_arrow_eos,_arrow_ethereum,_arrow_litecoin,_arrow_mana,_arrow_matic,_arrow_monero,_arrow_polkadot,_arrow_sand,_arrow_shiba,_arrow_solana,_arrow_tezos,_arrow_trx,_arrow_uniswap,_arrow_xlm,_arrow_xrp, _arrow_kaspa, _arrow_bat
-    global old_price_nano , _arrow_nano
-
-    if float(old_price_algo[-1]) < float(new_price_algo):
-         _arrow_algo = "(↗)"
-    if float(old_price_algo[-1]) > float(new_price_algo):
-         _arrow_algo = "(↘)"
-    if len(old_price_algo)>50:
-        old_price_algo= [0]
+        if float(crypto["old_price"][-1]) < float(crypto["new_price"]):
+            crypto["Arrow"] = "(↗)"
+        if float(old_price_algo[-1]) > float(new_price_algo):
+            _arrow_algo = "(↘)"
+        if len(old_price_algo)>50:
+            old_price_algo= [0]
     if float(old_price_ape[-1]) < float(new_price_ape):
          _arrow_ape = "(↗)"
     if float(old_price_ape[-1]) > float(new_price_ape):
