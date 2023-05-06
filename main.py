@@ -90,94 +90,91 @@ async def all_changes():
              for i in bot_ape.guilds:
                  await i.get_member(int(bot_ape.user.id)).edit(nick = f'{"$"}{bot_info["Ape"]["new_price"]}{" "}{bot_info["Ape"]["Arrow"]}')
 
-
              for i in bot_atom.guilds:
-                 await i.get_member(int(bot_atom.user.id)).edit(nick = f'{"$"}{new_price_atom}{" "}{_arrow_atom}')
+                 await i.get_member(int(bot_atom.user.id)).edit(nick = f'{"$"}{bot_info["Atom"]["new_price"]}{" "}{bot_info["Atom"]["Arrow"]}')
 
              for i in bot_avax.guilds:
-                 await i.get_member(int(bot_avax.user.id)).edit(nick = f'{"$"}{new_price_avax}{" "}{_arrow_avax}')
+                 await i.get_member(int(bot_avax.user.id)).edit(nick = f'{"$"}{bot_info["Ape"]["Avax"]}{" "}{bot_info["Avax"]["Arrow"]}')
 
              for i in bot_banano.guilds:
-                 await i.get_member(int(bot_banano.user.id)).edit(nick = f'{"$"}{new_price_banano}{" "}{_arrow_banano}')
+                 await i.get_member(int(bot_banano.user.id)).edit(nick = f'{"$"}{bot_info["Banano"]["new_price"]}{" "}{bot_info["Banano"]["Arrow"]}')
 
              for i in bot_bch.guilds:
-                 await i.get_member(int(bot_bch.user.id)).edit(nick = f'{"$"}{new_price_bch}{" "}{_arrow_bch}')
+                 await i.get_member(int(bot_bch.user.id)).edit(nick = f'{"$"}{bot_info["Bch"]["new_price"]}{" "}{bot_info["Bch"]["Arrow"]}')
 
              for i in bot_bitcoin.guilds:
-                 await i.get_member(int(bot_bitcoin.user.id)).edit(nick = f'{"$"}{new_price_bitcoin}{" "}{_arrow_bitcoin}')
+                 await i.get_member(int(bot_bitcoin.user.id)).edit(nick = f'{"$"}{bot_info["Bitcoin"]["new_price"]}{" "}{bot_info["Bitcoin"]["Arrow"]}')
 
              for i in bot_bnb.guilds:
-                 await i.get_member(int(bot_bnb.user.id)).edit(nick = f'{"$"}{new_price_bnb}{" "}{_arrow_bnb}')
+                 await i.get_member(int(bot_bnb.user.id)).edit(nick = f'{"$"}{bot_info["BNB"]["new_price"]}{" "}{bot_info["BNB"]["Arrow"]}')
 
              for i in bot_cake.guilds:
-                 await i.get_member(int(bot_cake.user.id)).edit(nick = f'{"$"}{new_price_cake}{" "}{_arrow_cake}')
+                 await i.get_member(int(bot_cake.user.id)).edit(nick = f'{"$"}{bot_info["Cake"]["new_price"]}{" "}{bot_info["Cake"]["Arrow"]}')
 
              for i in bot_cardano.guilds:
-                 await i.get_member(int(bot_cardano.user.id)).edit(nick = f'{"$"}{new_price_cardano}{" "}{_arrow_cardano}')
+                 await i.get_member(int(bot_cardano.user.id)).edit(nick = f'{"$"}{bot_info["Cardano"]["new_price"]}{" "}{bot_info["Cardano"]["Arrow"]}')
 
              for i in bot_chainlink.guilds:
-                 await i.get_member(int(bot_chainlink.user.id)).edit(nick = f'{"$"}{new_price_chainlink}{" "}{_arrow_chainlink}')
+                 await i.get_member(int(bot_chainlink.user.id)).edit(nick = f'{"$"}{bot_info["Chainlink"]["new_price"]}{" "}{bot_info["Chainlink"]["Arrow"]}')
 
              for i in bot_cronos.guilds:
-                 await i.get_member(int(bot_cronos.user.id)).edit(nick = f'{"$"}{new_price_cronos}{" "}{_arrow_cronos}')
+                 await i.get_member(int(bot_cronos.user.id)).edit(nick = f'{"$"}{bot_info["Cronos"]["new_price"]}{" "}{bot_info["Cronos"]["Arrow"]}')
 
              for i in bot_dogecoin.guilds:
-                 await i.get_member(int(bot_dogecoin.user.id)).edit(nick = f'{"$"}{new_price_dogecoin}{" "}{_arrow_dogecoin}')
+                 await i.get_member(int(bot_dogecoin.user.id)).edit(nick = f'{"$"}{bot_info["Dogecoin"]["new_price"]}{" "}{bot_info["Dogecoin"]["Arrow"]}')
 
              for i in bot_eos.guilds:
-                 await i.get_member(int(bot_eos.user.id)).edit(nick = f'{"$"}{new_price_eos}{" "}{_arrow_eos}')
+                 await i.get_member(int(bot_eos.user.id)).edit(nick = f'{"$"}{bot_info["Eos"]["new_price"]}{" "}{bot_info["Eos"]["Arrow"]}')
 
              for i in bot_eth.guilds:
-                 await i.get_member(int(bot_eth.user.id)).edit(nick = f'{"$"}{new_price_ethereum}{" "}{_arrow_ethereum}')
+                 await i.get_member(int(bot_eth.user.id)).edit(nick = f'{"$"}{bot_info["Ethereum"]["new_price"]}{" "}{bot_info["Ethereum"]["Arrow"]}')
 
              for i in bot_litecoin.guilds:
-                 await i.get_member(int(bot_litecoin.user.id)).edit(nick = f'{"$"}{new_price_litecoin}{" "}{_arrow_litecoin}')
+                 await i.get_member(int(bot_litecoin.user.id)).edit(nick = f'{"$"}{bot_info["Litecoin"]["new_price"]}{" "}{bot_info["Litecoin"]["Arrow"]}')
 
              for i in bot_mana.guilds:
-                 await i.get_member(int(bot_mana.user.id)).edit(nick = f'{"$"}{new_price_mana}{" "}{_arrow_mana}')
+                 await i.get_member(int(bot_mana.user.id)).edit(nick = f'{"$"}{bot_info["Mana"]["new_price"]}{" "}{bot_info["Mana"]["Arrow"]}')
 
              for i in bot_matic.guilds:
-                 await i.get_member(int(bot_matic.user.id)).edit(nick = f'{"$"}{new_price_matic}{" "}{_arrow_matic}')
+                 await i.get_member(int(bot_matic.user.id)).edit(nick = f'{"$"}{bot_info["Matic"]["new_price"]}{" "}{bot_info["Matic"]["Arrow"]}')
 
              for i in bot_monero.guilds:
-                 await i.get_member(int(bot_monero.user.id)).edit(nick = f'{"$"}{new_price_monero}{" "}{_arrow_monero}')
+                 await i.get_member(int(bot_monero.user.id)).edit(nick = f'{"$"}{bot_info["Monero"]["new_price"]}{" "}{bot_info["Monero"]["Arrow"]}')
 
              for i in bot_polkadot.guilds:
-                 await i.get_member(int(bot_polkadot.user.id)).edit(nick = f'{"$"}{new_price_polkadot}{" "}{_arrow_polkadot}')
+                 await i.get_member(int(bot_polkadot.user.id)).edit(nick = f'{"$"}{bot_info["Polkadot"]["new_price"]}{" "}{bot_info["Polkadot"]["Arrow"]}')
 
              for i in bot_sand.guilds:
-                 await i.get_member(int(bot_sand.user.id)).edit(nick = f'{"$"}{new_price_sand}{" "}{_arrow_sand}')
-
-             #for i in bot_shiba.guilds:
-                # await i.get_member(int(bot_shiba.user.id)).edit(nick = f'{"$"}{new_price_shiba}{" "}{_arrow_shiba}')
+                 await i.get_member(int(bot_sand.user.id)).edit(nick = f'{"$"}{bot_info["Sand"]["new_price"]}{" "}{bot_info["Sand"]["Arrow"]}')
 
              for i in bot_solana.guilds:
-                 await i.get_member(int(bot_solana.user.id)).edit(nick = f'{"$"}{new_price_solana}{" "}{_arrow_solana}')
+                 await i.get_member(int(bot_solana.user.id)).edit(nick = f'{"$"}{bot_info["Solana"]["new_price"]}{" "}{bot_info["Solana"]["Arrow"]}')
 
              for i in bot_tezos.guilds:
-                 await i.get_member(int(bot_tezos.user.id)).edit(nick = f'{"$"}{new_price_tezos}{" "}{_arrow_tezos}')
+                 await i.get_member(int(bot_tezos.user.id)).edit(nick = f'{"$"}{bot_info["Tezos"]["new_price"]}{" "}{bot_info["Tezos"]["Arrow"]}')
 
              for i in bot_trx.guilds:
-                 await i.get_member(int(bot_trx.user.id)).edit(nick = f'{"$"}{new_price_trx}{" "}{_arrow_trx}')
+                 await i.get_member(int(bot_trx.user.id)).edit(nick = f'{"$"}{bot_info["Trx"]["new_price"]}{" "}{bot_info["Trx"]["Arrow"]}')
 
              for i in bot_uniswap.guilds:
-                 await i.get_member(int(bot_uniswap.user.id)).edit(nick = f'{"$"}{new_price_uniswap}{" "}{_arrow_uniswap}')
+                 await i.get_member(int(bot_uniswap.user.id)).edit(nick = f'{"$"}{bot_info["Uniswap"]["new_price"]}{" "}{bot_info["Uniswap"]["Arrow"]}')
 
              for i in bot_xlm.guilds:
-                 await i.get_member(int(bot_xlm.user.id)).edit(nick = f'{"$"}{new_price_xlm}{" "}{_arrow_xlm}')
+                 await i.get_member(int(bot_xlm.user.id)).edit(nick = f'{"$"}{bot_info["Xlm"]["new_price"]}{" "}{bot_info["Xlm"]["Arrow"]}')
 
              for i in bot_xrp.guilds:
-                 await i.get_member(int(bot_xrp.user.id)).edit(nick = f'{"$"}{new_price_xrp}{" "}{_arrow_xrp}')
+                 await i.get_member(int(bot_xrp.user.id)).edit(nick = f'{"$"}{bot_info["Xrp"]["new_price"]}{" "}{bot_info["Xrp"]["Arrow"]}')
 
              for i in bot_nano.guilds:
-                 await i.get_member(int(bot_nano.user.id)).edit(nick = f'{"$"}{new_price_nano}{" "}{_arrow_nano}')
+                 await i.get_member(int(bot_nano.user.id)).edit(nick = f'{"$"}{bot_info["Nano"]["new_price"]}{" "}{bot_info["Nano"]["Arrow"]}')
 
              for i in bot_kaspa.guilds:
-                 await i.get_member(int(bot_kaspa.user.id)).edit(nick = f'{"$"}{new_price_kaspa}{" "}{_arrow_kaspa}')
+                 await i.get_member(int(bot_kaspa.user.id)).edit(nick = f'{"$"}{bot_info["Kaspa"]["new_price"]}{" "}{bot_info["Kaspa"]["Arrow"]}')
 
              for i in bot_bat.guilds:
-                 await i.get_member(int(bot_bat.user.id)).edit(nick = f'{"$"}{new_price_bat}{" "}{_arrow_bat}')
+                 await i.get_member(int(bot_bat.user.id)).edit(nick = f'{"$"}{bot_info["Bat"]["new_price"]}{" "}{bot_info["Bat"]["Arrow"]}')
 
+            #bot_info["Algo"]["a1"],bot_info["Algo"]["a2"],bot_info["Algo"]["a3"]
 
              await bot_algo.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_algo,a2_algo,a3_algo])}'))
              await bot_ape.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_ape,a2_ape,a3_ape])}'))
