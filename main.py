@@ -80,19 +80,15 @@ async def all_changes():
     schedule.every().minute.do(fetching_status)
     schedule.every().minute.do(start)
     while True:
+
         try:
-         global changing_nick_in_time, a1_algo, a1_ape, a1_atom, a1_avax , a1_banano, a1_bch, a1_bitcoin, a1_bnb, a1_cake,a1_cardano,a1_chainlink,a1_cronos,a1_dogecoin, a1_eos, a1_ethereum, a1_litecoin, a1_mana, a1_matic, a1_monero, a1_polkadot, a1_sand, a1_shiba, a1_solana, a1_tezos, a1_trx, a1_uniswap, a1_xlm, a1_xrp,a1_kaspa,a2_algo, a2_ape, a2_atom, a2_avax , a2_banano, a2_bch, a2_bitcoin, a2_bnb, a2_cake,a2_cardano,a2_chainlink,a2_cronos,a2_dogecoin, a2_eos, a2_ethereum, a2_litecoin, a2_mana, a2_matic, a2_monero, a2_polkadot, a2_sand, a2_shiba, a2_solana, a2_tezos, a2_trx, a2_uniswap, a2_xlm, a2_xrp ,a2_kaspa,a3_algo, a3_ape, a3_atom, a3_avax , a3_banano, a3_bch, a3_bitcoin, a3_bnb, a3_cake,a3_cardano,a3_chainlink,a3_cronos,a3_dogecoin, a3_eos, a3_ethereum, a3_litecoin, a3_mana, a3_matic, a3_monero, a3_polkadot, a3_sand, a3_shiba, a3_solana, a3_tezos, a3_trx, a3_uniswap, a3_xlm, a3_xrp, a3_kaspa
-         global new_price_algo, new_price_ape, new_price_atom, new_price_avax ,new_price_banano,new_price_bch,new_price_bitcoin,new_price_bnb,new_price_cake,new_price_cardano,new_price_chainlink,new_price_cronos,new_price_dogecoin,new_price_eos,new_price_ethereum,new_price_litecoin,new_price_mana,new_price_matic,new_price_monero,new_price_polkadot,new_price_sand,new_price_shiba,new_price_solana,new_price_tezos,new_price_trx,new_price_uniswap,new_price_xlm,new_price_xrp, new_price_kaspa
-         global  _arrow_algo, _arrow_ape, _arrow_atom, _arrow_avax ,_arrow_banano,_arrow_bch,_arrow_bitcoin,_arrow_bnb,_arrow_cake,_arrow_cardano,_arrow_chainlink,_arrow_cronos,_arrow_dogecoin,_arrow_eos,_arrow_ethereum,_arrow_litecoin,_arrow_mana,_arrow_matic,_arrow_monero,_arrow_polkadot,_arrow_sand,_arrow_shiba,_arrow_solana,_arrow_tezos,_arrow_trx,_arrow_uniswap,_arrow_xlm,_arrow_xrp, _arrow_kaspa
-         global a1_nano, a2_nano, a3_nano, new_price_nano, _arrow_nano
-         global a1_bat, a2_bat, a3_bat, new_price_bat, _arrow_bat
          changing_nick_in_time -=1
          if changing_nick_in_time == 0:
              for i in bot_algo.guilds:
-                 await i.get_member(int(bot_algo.user.id)).edit(nick = f'{"$"}{new_price_algo}{" "}{_arrow_algo}')
+                 await i.get_member(int(bot_algo.user.id)).edit(nick = f'{"$"}{bot_info["Algo"]["new_price"]}{" "}{bot_info["Algo"]["Arrow"]}')
 
              for i in bot_ape.guilds:
-                 await i.get_member(int(bot_ape.user.id)).edit(nick = f'{"$"}{new_price_ape}{" "}{_arrow_ape}')
+                 await i.get_member(int(bot_ape.user.id)).edit(nick = f'{"$"}{bot_info["Ape"]["new_price"]}{" "}{bot_info["Ape"]["Arrow"]}')
 
 
              for i in bot_atom.guilds:
