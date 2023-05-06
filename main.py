@@ -32,11 +32,17 @@ for i in range(number_of_bots):
 changing_nick_in_time = 100
 
 convert = {}
+ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","shiba-inu","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
+
+for t in range(number_of_bots):
+    convert.update({bots[i]:ids[i]})
+
+
 
 def fetching_status():
-    global _status
+    global _status,ids,convert
 
-    _status = cg.get_price(ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","shiba-inu","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"], vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
+    _status = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
 
     change_in_price_algo = round(float(_status["algorand"]["usd_24h_change"]),2)
     mcap_algo = f'{(round(int(_status["algorand"]["usd_market_cap"]),0)):,}'
