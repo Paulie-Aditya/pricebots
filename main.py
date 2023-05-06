@@ -45,6 +45,7 @@ def fetching_status():
     _status = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
 
     for j in range(number_of_bots):
+        if bots[j] != "Kaspa"
         bot_info[bots[j]["Change"]] = round(float(_status[convert[bots[j]]]["usd_24h_change"]),2)
         bot_info[bots[j]["Mcap"]] = f'{(round(int(_status[convert[bots[j]]]["usd_market_cap"]),0)):,}'
         bot_info[bots[j]["Dailyvol"]] = f'{(round(int(_status[convert[bots[j]]]["usd_24h_vol"]),0)):,}'
@@ -55,6 +56,17 @@ def fetching_status():
         bot_info[bots[j]["a1"]] = f'{"24h Change:"} {bot_info[bots[j]["Up_or_down"]]}{bot_info[bots[j]["Change"]]}{"%"}'
         bot_info[bots[j]["a2"]] = f'{"Market Cap: "}{"$"}{bot_info[bots[j]["Mcap"]]}'
         bot_info[bots[j]["a3"]] = f'{"24h Vol: "}{"$"}{bot_info[bots[j]["Dailyvol"]]}'
+
+    change_in_price_kaspa = round(float(_status["kaspa"]["usd_24h_change"]),2)
+    mcap_kaspa = f'{(round(int(_status["kaspa"]["usd_market_cap"]),0)):,}'
+    dailyvol_kaspa =f'{(round(int(_status["kaspa"]["usd_24h_vol"]),0)):,}'
+    if change_in_price_kaspa > 0:
+         stonks_or_not_kaspa = "+"
+    elif change_in_price_kaspa < 0:
+         stonks_or_not_kaspa = "\u200b"
+    a1_kaspa= f'{"🍅24h Change:"} {stonks_or_not_kaspa}{change_in_price_kaspa}{"%"}'
+    a2_kaspa= f'{"🍅Market Cap: "}{"$"}{mcap_kaspa}'
+    a3_kaspa=f'{"🍅24h Vol: "}{"$"}{dailyvol_kaspa}'
 
 
     change_in_price_algo = round(float(_status["algorand"]["usd_24h_change"]),2)
