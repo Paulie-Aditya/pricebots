@@ -7,26 +7,8 @@ cg = CoinGeckoAPI()
 import asyncio
 import random
 
-bot_algo= bot_ape= bot_atom= bot_avax= bot_banano= bot_bch = bot_bitcoin= bot_bnb= bot_cake= bot_cardano = bot_chainlink= bot_cronos = bot_dogecoin= bot_eos= discord.Bot()
-bot_eth= discord.Bot()
-bot_litecoin = discord.Bot()
-bot_mana = discord.Bot()
-bot_matic = discord.Bot()
-bot_monero = discord.Bot()
-bot_polkadot= discord.Bot()
-bot_sand= discord.Bot()
-bot_shiba = discord.Bot()
-bot_solana= discord.Bot()
-bot_tezos= discord.Bot()
-bot_trx= discord.Bot()
-bot_uniswap= discord.Bot()
-bot_xlm= discord.Bot()
-bot_xrp = discord.Bot()
-bot_nano = discord.Bot()
-bot_bat = discord.Bot()
-bot_kaspa = discord.Bot()
-
-
+bot_algo= bot_ape= bot_atom= bot_avax= bot_banano= bot_bch = bot_bitcoin= bot_bnb= bot_cake= bot_cardano = bot_chainlink= bot_cronos = bot_dogecoin= bot_eos= bot_eth= discord.Bot()
+bot_litecoin = bot_mana = bot_matic = bot_monero = bot_polkadot= bot_sand= bot_shiba = bot_solana= bot_tezos= bot_trx= bot_uniswap= bot_xlm= bot_xrp = bot_nano = bot_bat = bot_kaspa = discord.Bot()
 
 
 #pip install schedule
@@ -35,12 +17,10 @@ import time
 
 _status = {}
 
-change_in_price_algo= 0
-change_in_price_ape= 0
-change_in_price_atom = 0
-change_in_price_avax = 0
-change_in_price_banano = 0
-change_in_price_bch = 0
+number_of_bots = 32
+#bot_info = {"Coin Name: [Change_in_price, Mcap, ]"}
+bot_info = {}
+["Algo", "Ape", "Atom","Avax","Banano","Bch","Bitcoin","BNB","Cake","Cardano","Chainlink","Cronos",]
 change_in_price_bitcoin = 0
 change_in_price_bnb = 0
 change_in_price_cake = 0
