@@ -174,7 +174,7 @@ async def all_changes():
              for i in bot_bat.guilds:
                  await i.get_member(int(bot_bat.user.id)).edit(nick = f'{"$"}{bot_info["Bat"]["new_price"]}{" "}{bot_info["Bat"]["Arrow"]}')
 
-            #bot_info["Algo"]["a1"],bot_info["Algo"]["a2"],bot_info["Algo"]["a3"]
+            #name = f'{random.choice (bot_info["Algo"]["a1"],bot_info["Algo"]["a2"],bot_info["Algo"]["a3"])}'
 
              await bot_algo.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_algo,a2_algo,a3_algo])}'))
              await bot_ape.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_ape,a2_ape,a3_ape])}'))
