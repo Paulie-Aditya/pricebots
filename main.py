@@ -41,7 +41,6 @@ def fetching_status():
 
     for j in range(number_of_bots):
         crypto= bot_info[bots[j]]
-        print(crypto)
         crypto["Change"] = round(float(_status[ids[j]]["usd_24h_change"]),2)
         crypto["Mcap"] = f'{(round(int(_status[ids[j]]["usd_market_cap"]),0)):,}'
         crypto["Dailyvol"] = f'{(round(int(_status[ids[j]]["usd_24h_vol"]),0)):,}'
@@ -60,9 +59,6 @@ def fetching_status():
             crypto["a2"] = f'{"Market Cap: "}{"$"}{crypto["Mcap"]}'
             crypto["a3"] = f'{"24h Vol: "}{"$"}{crypto["Dailyvol"]}'
 
-fetching_status()
-#print(bot_info)
-"""
 
 def start():
     y= cg.get_price(ids = ids, vs_currencies="usd")
