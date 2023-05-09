@@ -76,6 +76,7 @@ def start():
         (crypto["old_price"]).append(crypto["new_price"])
 
 
+"""
 
 async def all_changes():
     schedule.every().minute.do(fetching_status)
