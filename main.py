@@ -1,7 +1,7 @@
 import discord
 import discord.ext
-from discord.ext import commands
-from discord.ext.commands import bot
+#from discord.ext import commands
+#from discord.ext.commands import bot
 from pycoingecko import CoinGeckoAPI
 cg = CoinGeckoAPI()
 import asyncio
@@ -342,7 +342,8 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(bot_kaspa))
     await all_changes()
 
-loop = asyncio.set_event_loop(loop)
+loop = asyncio.new_event_loop()
+asyncio.set_event_loop(loop)
 loop.create_task(bot_algo.start(algo_token))
 loop.create_task(bot_ape.start(ape_token))
 loop.create_task(bot_atom.start(atom_token))
@@ -372,5 +373,5 @@ loop.create_task(bot_xlm.start(xlm_token))
 loop.create_task(bot_xrp.start(xrp_token))
 loop.create_task(bot_nano.start(nano_token))
 loop.create_task(bot_bat.start(bat_token))
-loop.create_task(bot_kaspa.run(kaspa_token))
-loop.run_until_complete(future,loop=self)
+loop.create_task(bot_kaspa.start(kaspa_token))
+loop.run_until_complete(future,loop=loop)
