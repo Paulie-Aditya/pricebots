@@ -374,4 +374,8 @@ loop.create_task(bot_xrp.start(xrp_token))
 loop.create_task(bot_nano.start(nano_token))
 loop.create_task(bot_bat.start(bat_token))
 loop.create_task(bot_kaspa.start(kaspa_token))
-loop.run_forever()
+try:
+    loop.run_forever()
+finally:
+    loop.run_until_complete(loop.shutdown_asyncgens())
+    loop.close()
