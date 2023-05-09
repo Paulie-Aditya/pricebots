@@ -58,15 +58,16 @@ for i in range(number_of_bots):
 changing_nick_in_time = 100
 
 ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
-y = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
+#y = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
 
+status = {}
 def fetching_status():
-
+    status.update(cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True))
     for j in range(number_of_bots):
         crypto= bot_info[bots[j]]
-        crypto["Change"] = round(float(y[ids[j]]["usd_24h_change"]),2)
-        crypto["Mcap"] = f'{(round(int(y[ids[j]]["usd_market_cap"]),0)):,}'
-        crypto["Dailyvol"] = f'{(round(int(y[ids[j]]["usd_24h_vol"]),0)):,}'
+        crypto["Change"] = round(float(status[ids[j]]["usd_24h_change"]),2)
+        crypto["Mcap"] = f'{(round(int(status[ids[j]]["usd_market_cap"]),0)):,}'
+        crypto["Dailyvol"] = f'{(round(int(status[ids[j]]["usd_24h_vol"]),0)):,}'
 
         if crypto["Change"] > 0:
             crypto["Up_or_down"] = "+"
@@ -84,6 +85,7 @@ def fetching_status():
 
 
 def start():
+    y = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
     for t in range(number_of_bots):
         crypto= bot_info[bots[t]]
         crypto["new_price"] = y[ids[t]]["usd"]
