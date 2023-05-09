@@ -342,8 +342,9 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(bot_kaspa))
     await all_changes()
 
-"""
 loop = asyncio.get_event_loop()
+"""
+
 
 loop.create_task(bot_algo.start(algo_token))
 loop.create_task(bot_ape.start(ape_token))
@@ -377,5 +378,6 @@ loop.create_task(bot_bat.start(bat_token))
 loop.create_task(bot_kaspa.run(kaspa_token))
 
 
-loop.run_until_complete()
+
 """
+loop.run_until_complete()
