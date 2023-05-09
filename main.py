@@ -79,7 +79,6 @@ def start():
 
 
 
-"""
 async def all_changes():
     schedule.every().minute.do(fetching_status)
     schedule.every().minute.do(start)
