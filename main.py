@@ -377,7 +377,3 @@ loop.create_task(bot_bat.start(bat_token))
 loop.create_task(bot_kaspa.run(kaspa_token))
 
 loop.run_until_complete()
-
-
-
-
