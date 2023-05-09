@@ -65,6 +65,7 @@ def start():
     for t in range(number_of_bots):
         crypto= bot_info[bots[t]]
         crypto["new_price"] = y[ids[t]]["usd"]
+        print(crypto["new_price"])
 
         if float(crypto["old_price"][-1]) < float(crypto["new_price"]):
             crypto["Arrow"] = "(↗)"
@@ -78,6 +79,7 @@ def start():
 
 
 
+"""
 async def all_changes():
     schedule.every().minute.do(fetching_status)
     schedule.every().minute.do(start)
