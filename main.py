@@ -72,7 +72,7 @@ def start():
 
 
 
-
+"""
 async def all_changes():
     schedule.every().minute.do(fetching_status)
     schedule.every().minute.do(start)
@@ -211,6 +211,9 @@ async def all_changes():
             continue
         await asyncio.sleep(1)
         schedule.run_pending()
+"""
+
+
 
 @bot_algo.event
 async def on_ready():
