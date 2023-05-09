@@ -345,8 +345,8 @@ async def on_ready():
 
 loop = asyncio.get_event_loop()
 
-loop.create_task(bot_algo.start(algo_token) )
-loop.create_task(bot_ape.start(ape_token) )
+loop.create_task(bot_algo.start(algo_token))
+loop.create_task(bot_ape.start(ape_token))
 loop.create_task(bot_atom.start(atom_token))
 loop.create_task(bot_avax.start(avax_token))
 loop.create_task(bot_banano.start(banano_token))
