@@ -222,7 +222,7 @@ async def all_changes():
          changing_nick_in_time -=1
          if changing_nick_in_time == 0:
              for i in bot_algo.guilds:
-                 await i.get_member(int(bot_algo.user.id)).edit(nick = f'{"$"}{new_price_algo}{" "}{_arrow_algo}')
+                 await i.get_member(int(bot_algo.user.id)).edit(nick = f'{"$"}{bot_info[]["new_price"]}{" "}{_arrow_algo}')
 
              for i in bot_ape.guilds:
                  await i.get_member(int(bot_ape.user.id)).edit(nick = f'{"$"}{new_price_ape}{" "}{_arrow_ape}')
