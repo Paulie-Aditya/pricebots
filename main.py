@@ -17,9 +17,6 @@ bot_litecoin = bot_mana = bot_matic = bot_monero = bot_polkadot= bot_sand= bot_s
 import schedule
 import time
 
-_status = {}
-
-
 bots= ["Algo", "Ape", "Atom","Avax","Banano","Bch","Bitcoin","BNB","Cake","Cardano","Chainlink","Cronos","Dogecoin","Eos","Ethereum","Litecoin","Mana","Matic","Monero","Polkadot","Sand","Solana","Tezos","Trx","Uniswap","Xlm","Xrp","Nano","Kaspa","Bat"]
 number_of_bots = len(bots)
 
@@ -37,13 +34,11 @@ y = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_
 
 def fetching_status():
 
-    _status.update(y)
-
     for j in range(number_of_bots):
         crypto= bot_info[bots[j]]
-        crypto["Change"] = round(float(_status[ids[j]]["usd_24h_change"]),2)
-        crypto["Mcap"] = f'{(round(int(_status[ids[j]]["usd_market_cap"]),0)):,}'
-        crypto["Dailyvol"] = f'{(round(int(_status[ids[j]]["usd_24h_vol"]),0)):,}'
+        crypto["Change"] = round(float(y[ids[j]]["usd_24h_change"]),2)
+        crypto["Mcap"] = f'{(round(int(y[ids[j]]["usd_market_cap"]),0)):,}'
+        crypto["Dailyvol"] = f'{(round(int(y[ids[j]]["usd_24h_vol"]),0)):,}'
 
         if crypto["Change"] > 0:
             crypto["Up_or_down"] = "+"
