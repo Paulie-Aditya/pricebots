@@ -179,7 +179,7 @@ async def all_changes():
 
 
              await bot_algo.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice(bot_info["Algo"]["a1"],bot_info["Algo"]["a2"],bot_info["Algo"]["a3"])}'))
-             await bot_algo.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice (bot_info["Algo"]["a1"],bot_info["Algo"]["a2"],bot_info["Algo"]["a3"])}'))
+             
              await bot_ape.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice (bot_info["Ape"]["a1"],bot_info["Ape"]["a2"],bot_info["Ape"]["a3"])}'))
              await bot_atom.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice (bot_info["Atom"]["a1"],bot_info["Atom"]["a2"],bot_info["Atom"]["a3"])}'))
              await bot_avax.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice (bot_info["Avax"]["a1"],bot_info["Avax"]["a2"],bot_info["Avax"]["a3"])}'))
