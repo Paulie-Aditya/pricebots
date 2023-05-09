@@ -229,7 +229,8 @@ async def all_changes():
                  await i.get_member(int(bot_bat.user.id)).edit(nick = f'{"$"}{bot_info[curr]["new_price"]}{" "}{bot_info[curr]["Arrow"]}')
 
 
-             choice = random.choice("a1","a2","a3")
+             #choice = random.choice("a1","a2","a3")
+             choice = "a1"
              await bot_algo.change_presence(activity=discord.Activity(type=discord.ActivityType.watching,name = f'{bot_info["Algo"][choice]}'))
              await bot_ape.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{bot_info["Ape"][choice]}'))
              await bot_atom.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{bot_info["Atom"][choice]}'))
