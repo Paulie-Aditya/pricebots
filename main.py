@@ -52,15 +52,17 @@ def fetching_status():
             crypto["Up_or_down"] = "\u200b"
 
         if bots[j] == "Kaspa":
-            bot_info[bots[j]["a1"]] = f'{"🍅 24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
-            bot_info[bots[j]["a2"]] = f'{"🍅 Market Cap: "}{"$"}{crypto["Mcap"]}'
-            bot_info[bots[j]["a3"]] = f'{"🍅 24h Vol: "}{"$"}{crypto["Dailyvol"]}'
+            bot_info[bots[j]]["a1"] = f'{"🍅 24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
+            bot_info[bots[j]]["a2"] = f'{"🍅 Market Cap: "}{"$"}{crypto["Mcap"]}'
+            bot_info[bots[j]]["a3"] = f'{"🍅 24h Vol: "}{"$"}{crypto["Dailyvol"]}'
         else:
-            bot_info[bots[j]["a1"]] = f'{"24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
-            bot_info[bots[j]["a2"]] = f'{"Market Cap: "}{"$"}{crypto["Mcap"]}'
-            bot_info[bots[j]["a3"]] = f'{"24h Vol: "}{"$"}{crypto["Dailyvol"]}'
+            crypto["a1"] = f'{"24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
+            crypto["a2"] = f'{"Market Cap: "}{"$"}{crypto["Mcap"]}'
+            crypto["a3"] = f'{"24h Vol: "}{"$"}{crypto["Dailyvol"]}'
 
-
+fetching_status()
+#print(bot_info)
+"""
 
 def start():
     y= cg.get_price(ids = ids, vs_currencies="usd")
