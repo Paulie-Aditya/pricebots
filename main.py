@@ -97,7 +97,7 @@ async def all_changes():
                  await i.get_member(int(bot_atom.user.id)).edit(nick = f'{"$"}{bot_info["Atom"]["new_price"]}{" "}{bot_info["Atom"]["Arrow"]}')
 
              for i in bot_avax.guilds:
-                 await i.get_member(int(bot_avax.user.id)).edit(nick = f'{"$"}{bot_info["Ape"]["Avax"]}{" "}{bot_info["Avax"]["Arrow"]}')
+                 await i.get_member(int(bot_avax.user.id)).edit(nick = f'{"$"}{bot_info["Ape"]["new_price"]}{" "}{bot_info["Avax"]["Arrow"]}')
 
              for i in bot_banano.guilds:
                  await i.get_member(int(bot_banano.user.id)).edit(nick = f'{"$"}{bot_info["Banano"]["new_price"]}{" "}{bot_info["Banano"]["Arrow"]}')
