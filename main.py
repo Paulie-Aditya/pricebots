@@ -46,9 +46,9 @@ def fetching_status():
             crypto["Up_or_down"] = "\u200b"
 
         if bots[j] == "Kaspa":
-            bot_info[bots[j]]["a1"] = f'{"🍅 24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
-            bot_info[bots[j]]["a2"] = f'{"🍅 Market Cap: "}{"$"}{crypto["Mcap"]}'
-            bot_info[bots[j]]["a3"] = f'{"🍅 24h Vol: "}{"$"}{crypto["Dailyvol"]}'
+            bot_info["Kaspa"]["a1"] = f'{"🍅 24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
+            bot_info["Kaspa"]["a2"] = f'{"🍅 Market Cap: "}{"$"}{crypto["Mcap"]}'
+            bot_info["Kaspa"]["a3"] = f'{"🍅 24h Vol: "}{"$"}{crypto["Dailyvol"]}'
         else:
             crypto["a1"] = f'{"24h Change:"} {crypto["Up_or_down"]}{crypto["Change"]}{"%"}'
             crypto["a2"] = f'{"Market Cap: "}{"$"}{crypto["Mcap"]}'
