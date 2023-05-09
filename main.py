@@ -214,6 +214,150 @@ async def all_changes():
 """
 
 
+async def all_changes():
+    schedule.every().minute.do(fetching_status)
+    schedule.every().minute.do(start)
+    while True:
+        try:
+         changing_nick_in_time -=1
+         if changing_nick_in_time == 0:
+             for i in bot_algo.guilds:
+                 await i.get_member(int(bot_algo.user.id)).edit(nick = f'{"$"}{new_price_algo}{" "}{_arrow_algo}')
+
+             for i in bot_ape.guilds:
+                 await i.get_member(int(bot_ape.user.id)).edit(nick = f'{"$"}{new_price_ape}{" "}{_arrow_ape}')
+
+             for i in bot_atom.guilds:
+                 await i.get_member(int(bot_atom.user.id)).edit(nick = f'{"$"}{new_price_atom}{" "}{_arrow_atom}')
+
+             for i in bot_avax.guilds:
+                 await i.get_member(int(bot_avax.user.id)).edit(nick = f'{"$"}{new_price_avax}{" "}{_arrow_avax}')
+
+             for i in bot_banano.guilds:
+                 await i.get_member(int(bot_banano.user.id)).edit(nick = f'{"$"}{new_price_banano}{" "}{_arrow_banano}')
+
+             for i in bot_bch.guilds:
+                 await i.get_member(int(bot_bch.user.id)).edit(nick = f'{"$"}{new_price_bch}{" "}{_arrow_bch}')
+
+             for i in bot_bitcoin.guilds:
+                 await i.get_member(int(bot_bitcoin.user.id)).edit(nick = f'{"$"}{new_price_bitcoin}{" "}{_arrow_bitcoin}')
+
+             for i in bot_bnb.guilds:
+                 await i.get_member(int(bot_bnb.user.id)).edit(nick = f'{"$"}{new_price_bnb}{" "}{_arrow_bnb}')
+
+             for i in bot_cake.guilds:
+                 await i.get_member(int(bot_cake.user.id)).edit(nick = f'{"$"}{new_price_cake}{" "}{_arrow_cake}')
+
+             for i in bot_cardano.guilds:
+                 await i.get_member(int(bot_cardano.user.id)).edit(nick = f'{"$"}{new_price_cardano}{" "}{_arrow_cardano}')
+
+             for i in bot_chainlink.guilds:
+                 await i.get_member(int(bot_chainlink.user.id)).edit(nick = f'{"$"}{new_price_chainlink}{" "}{_arrow_chainlink}')
+
+             for i in bot_cronos.guilds:
+                 await i.get_member(int(bot_cronos.user.id)).edit(nick = f'{"$"}{new_price_cronos}{" "}{_arrow_cronos}')
+
+             for i in bot_dogecoin.guilds:
+                 await i.get_member(int(bot_dogecoin.user.id)).edit(nick = f'{"$"}{new_price_dogecoin}{" "}{_arrow_dogecoin}')
+
+             for i in bot_eos.guilds:
+                 await i.get_member(int(bot_eos.user.id)).edit(nick = f'{"$"}{new_price_eos}{" "}{_arrow_eos}')
+
+             for i in bot_eth.guilds:
+                 await i.get_member(int(bot_eth.user.id)).edit(nick = f'{"$"}{new_price_ethereum}{" "}{_arrow_ethereum}')
+
+             for i in bot_litecoin.guilds:
+                 await i.get_member(int(bot_litecoin.user.id)).edit(nick = f'{"$"}{new_price_litecoin}{" "}{_arrow_litecoin}')
+
+             for i in bot_mana.guilds:
+                 await i.get_member(int(bot_mana.user.id)).edit(nick = f'{"$"}{new_price_mana}{" "}{_arrow_mana}')
+
+             for i in bot_matic.guilds:
+                 await i.get_member(int(bot_matic.user.id)).edit(nick = f'{"$"}{new_price_matic}{" "}{_arrow_matic}')
+
+             for i in bot_monero.guilds:
+                 await i.get_member(int(bot_monero.user.id)).edit(nick = f'{"$"}{new_price_monero}{" "}{_arrow_monero}')
+
+             for i in bot_polkadot.guilds:
+                 await i.get_member(int(bot_polkadot.user.id)).edit(nick = f'{"$"}{new_price_polkadot}{" "}{_arrow_polkadot}')
+
+             for i in bot_sand.guilds:
+                 await i.get_member(int(bot_sand.user.id)).edit(nick = f'{"$"}{new_price_sand}{" "}{_arrow_sand}')
+
+             for i in bot_solana.guilds:
+                 await i.get_member(int(bot_solana.user.id)).edit(nick = f'{"$"}{new_price_solana}{" "}{_arrow_solana}')
+
+             for i in bot_tezos.guilds:
+                 await i.get_member(int(bot_tezos.user.id)).edit(nick = f'{"$"}{new_price_tezos}{" "}{_arrow_tezos}')
+
+             for i in bot_trx.guilds:
+                 await i.get_member(int(bot_trx.user.id)).edit(nick = f'{"$"}{new_price_trx}{" "}{_arrow_trx}')
+
+             for i in bot_uniswap.guilds:
+                 await i.get_member(int(bot_uniswap.user.id)).edit(nick = f'{"$"}{new_price_uniswap}{" "}{_arrow_uniswap}')
+
+             for i in bot_xlm.guilds:
+                 await i.get_member(int(bot_xlm.user.id)).edit(nick = f'{"$"}{new_price_xlm}{" "}{_arrow_xlm}')
+
+             for i in bot_xrp.guilds:
+                 await i.get_member(int(bot_xrp.user.id)).edit(nick = f'{"$"}{new_price_xrp}{" "}{_arrow_xrp}')
+
+             for i in bot_nano.guilds:
+                 await i.get_member(int(bot_nano.user.id)).edit(nick = f'{"$"}{new_price_nano}{" "}{_arrow_nano}')
+
+             for i in bot_kaspa.guilds:
+                 await i.get_member(int(bot_kaspa.user.id)).edit(nick = f'{"$"}{new_price_kaspa}{" "}{_arrow_kaspa}')
+
+             for i in bot_bat.guilds:
+                 await i.get_member(int(bot_bat.user.id)).edit(nick = f'{"$"}{new_price_bat}{" "}{_arrow_bat}')
+
+
+             await bot_algo.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_algo,a2_algo,a3_algo])}'))
+             await bot_ape.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_ape,a2_ape,a3_ape])}'))
+             await bot_atom.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_atom,a2_atom,a3_atom])}'))
+             await bot_avax.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_avax,a2_avax,a3_avax])}'))
+             await bot_banano.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_banano,a2_banano,a3_banano])}'))
+             await bot_bch.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_bch,a2_bch,a3_bch])}'))
+             await bot_bitcoin.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_bitcoin,a2_bitcoin,a3_bitcoin])}'))
+             await bot_bnb.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_bnb,a2_bnb,a3_bnb])}'))
+             await bot_cake.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_cake,a2_cake,a3_cake])}'))
+             await bot_cardano.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_cardano,a2_cardano,a3_cardano])}'))
+             await bot_chainlink.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_chainlink,a2_chainlink,a3_chainlink])}'))
+             await bot_cronos.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_cronos,a2_cronos,a3_cronos])}'))
+             await bot_dogecoin.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_dogecoin,a2_dogecoin,a3_dogecoin])}'))
+             await bot_eos.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_eos,a2_eos,a3_eos])}'))
+             await bot_eth.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_ethereum,a2_ethereum,a3_ethereum])}'))
+             await bot_litecoin.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_litecoin,a2_litecoin,a3_litecoin])}'))
+             await bot_mana.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_mana,a2_mana,a3_mana])}'))
+             await bot_matic.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_matic,a2_matic,a3_matic])}'))
+             await bot_monero.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_monero,a2_monero,a3_monero])}'))
+             await bot_polkadot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_polkadot,a2_polkadot,a3_polkadot])}'))
+             await bot_sand.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_sand,a2_sand,a3_sand])}'))
+             #await bot_shiba.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_shiba,a2_shiba,a3_shiba])}'))
+             await bot_solana.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_solana,a2_solana,a3_solana])}'))
+             await bot_tezos.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_tezos,a2_tezos,a3_tezos])}'))
+             await bot_trx.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_trx,a2_trx,a3_trx])}'))
+             await bot_uniswap.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_uniswap,a2_uniswap,a3_uniswap])}'))
+             await bot_xlm.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_xlm,a2_xlm,a3_xlm])}'))
+             await bot_xrp.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_xrp,a2_xrp,a3_xrp])}'))
+             await bot_nano.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_nano,a2_nano,a3_nano])}'))
+             await bot_bat.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_bat,a2_bat,a3_bat])}'))
+             await bot_kaspa.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = f'{random.choice([a1_kaspa,a2_kaspa,a3_kaspa])}'))
+
+             changing_nick_in_time +=100
+             continue
+
+        except:
+            time.sleep(10)
+            continue
+        await asyncio.sleep(1)
+        schedule.run_pending()
+
+
+
+
+
+
 
 @bot_algo.event
 async def on_ready():
