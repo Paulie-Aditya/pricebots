@@ -342,6 +342,42 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(bot_kaspa))
     await all_changes()
 
+
+
+loop = asyncio.get_event_loop()
+loop.create_task(bot_algo.start(algo_token))
+loop.create_task(bot_ape.start(ape_token))
+loop.create_task(bot_atom.start(atom_token))
+loop.create_task(bot_avax.start(avax_token))
+loop.create_task(bot_banano.start(banano_token))
+loop.create_task(bot_bch.start(bch_token))
+loop.create_task(bot_bitcoin.start(bitcoin_token))
+loop.create_task(bot_bnb.start(bnb_token))
+loop.create_task(bot_cake.start(cake_token))
+loop.create_task(bot_cardano.start(cardano_token))
+loop.create_task(bot_chainlink.start(chainlink_token))
+loop.create_task(bot_cronos.start(cronos_token))
+loop.create_task(bot_dogecoin.start(doge_token))
+loop.create_task(bot_eos.start(eos_token))
+loop.create_task(bot_eth.start(eth_token))
+loop.create_task(bot_litecoin.start(ltc_token))
+loop.create_task(bot_mana.start(mana_token))
+loop.create_task(bot_matic.start(matic_token))
+loop.create_task(bot_monero.start(monero_token))
+loop.create_task(bot_polkadot.start(polkadot_token))
+loop.create_task(bot_sand.start(sand_token))
+loop.create_task(bot_solana.start(solana_token))
+loop.create_task(bot_tezos.start(tezos_token))
+loop.create_task(bot_trx.start(trx_token))
+loop.create_task(bot_uniswap.start(uniswap_token))
+loop.create_task(bot_xlm.start(xlm_token))
+loop.create_task(bot_xrp.start(xrp_token))
+loop.create_task(bot_nano.start(nano_token))
+loop.create_task(bot_bat.start(bat_token))
+loop.create_task(bot_kaspa.run(kaspa_token))
+loop.run_until_complete()
+
+"""
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
 loop.create_task(bot_algo.start(algo_token))
@@ -378,4 +414,4 @@ try:
     loop.run_forever()
 finally:
     loop.run_until_complete(loop.shutdown_asyncgens())
-    loop.close()
+    loop.close()"""
