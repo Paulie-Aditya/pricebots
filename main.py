@@ -6,11 +6,8 @@ from pycoingecko import CoinGeckoAPI
 cg = CoinGeckoAPI()
 import asyncio
 import random
-import aiohttp
-session = aiohttp.ClientSession()
-# use the session here
 
-from config import *
+from config.py import *
 
 bot_algo= bot_ape= bot_atom= bot_avax= bot_banano= bot_bch = bot_bitcoin= bot_bnb= bot_cake= bot_cardano = bot_chainlink= bot_cronos = bot_dogecoin= bot_eos= bot_eth= discord.Bot()
 bot_litecoin = bot_mana = bot_matic = bot_monero = bot_polkadot= bot_sand= bot_solana= bot_tezos= bot_trx= bot_uniswap= bot_xlm= bot_xrp = bot_nano = bot_bat = bot_kaspa = discord.Bot()
@@ -381,5 +378,3 @@ loop.create_task(bot_kaspa.run(kaspa_token))
 
 
 loop.run_until_complete()
-
-session.close()
