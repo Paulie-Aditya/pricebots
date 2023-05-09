@@ -1,11 +1,10 @@
 
 algo_token = 'MTAwNDc5OTkwMjY2NjIxMTQ0MA.GCOSw4.BqB8hwubOATqKAWI-sjWMKqhGKIV9g3aTC7050'
 ape_token = 'MTAwNDgwMDExMjczNzkxNDk1MQ.Gs1o-q.zpb_-x-vqO5uA0_dqitqqdLgr_SwFQgQzqb3PE'
-
-atom_token = 'MTAwNDgwMDIwMDIwNTkzMDUzNg.Gbo4kw.2Veuas3Gse05UjPtPIvh0BjxndUtWj5BQFSjxo'
-avax_token = 'MTAwNDgwMDI5MzE3MjY5NTEyMA.Gz6sqS.5VfrPLfTzoyLDF53JXRM-9gx0j_wn1YD6k2LX4'
-banano_token = 'MTAwNDg2NTMyNjgzNzY3ODEwMQ.Ge2PhG.Iq5y50IZQoDlzQrh2njA8HDs8vdrw5BB0i7e-M'
-bch_token = 'MTAwNDgwMDM4ODYxODI2MDY3MQ.G3fxkN.12p5gItBuzH5FSw3WkRCLzs2CNvrx60sp2xrFk'
+atom_token = 'MTAwNDgwMDIwMDIwNTkzMDUzNg.G7kMV3.YknEQZhkClBbWG7A1AHesZt2awQgUpPSHJVMsQ'
+avax_token = 'MTAwNDgwMDI5MzE3MjY5NTEyMA.G0Cl0J.2yf_BzlH4eNboDE5FhPbQIoRjawRjlGMWjBZGs'
+banano_token = 'MTAwNDg2NTMyNjgzNzY3ODEwMQ.GVUGTX.zRnAUANtBkicTgn9GkwYZa2G10Nj58GPgAOyX4'
+bch_token = 'MTAwNDgwMDM4ODYxODI2MDY3MQ.GU47uZ.KWc22sS5xnNVIMzdwKgOwS5G4NNOICuCB1WlyA'
 bitcoin_token = 'MTAwNDA1Mzk4MTU5NDY2NTExMQ.GKSZYA.e7fx1L0Z1ftGf4u4sP7EGLHev0sIqMRXzO-8OU'
 bnb_token = 'MTAwNTMxNTEwNzQ3NzI2MjQzNw.GLZnWG.GLd7eNV-v0jwbOaN8V05NgssdHFeHceBI7KPFU'
 cake_token = 'MTAwNDgwMDQ2NDk1ODc5MTc4MA.Gmzodl.1-jeQ72ozbwFG_gPKJkSlElESEF5Rsj9iUg-BU'
