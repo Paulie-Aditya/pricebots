@@ -380,4 +380,4 @@ loop.create_task(bot_kaspa.run(kaspa_token))
 
 
 """
-loop.run_until_complete()
+loop.run_until_complete(loop)
