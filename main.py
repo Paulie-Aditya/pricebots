@@ -85,7 +85,7 @@ def fetching_status():
 
 
 def start():
-    y = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
+    y = cg.get_price(ids=ids, vs_currencies='usd')
     for t in range(number_of_bots):
         crypto= bot_info[bots[t]]
         crypto["new_price"] = y[ids[t]]["usd"]
