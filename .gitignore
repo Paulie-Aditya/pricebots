@@ -1,0 +1,63 @@
+
+algo_token =
+ape_token =
+atom_token =
+avax_token =
+banano_token =
+bch_token
+bitcoin_token
+bnb_token
+cake_token
+cardano_token
+chainlink_token
+cronos_token
+doge_token
+eos_token
+eth_token
+ltc_token
+mana_token
+matic_token
+monero_token
+polkadot_token
+sand_token
+solana_token =
+tezos_token
+trx_token
+uniswap_token
+xlm_token
+xrp_token
+nano_token
+bat_token
+kaspa_token = 'MTAyMTAwMzcyNTA1OTM5NTU4NQ.GEj8yu.NNOvuZM1eR7bt5sT1PvdaaTeRa7EznDWDiwEJ0'
+loop = asyncio.get_event_loop()
+loop.create_task(bot_algo.start('MTAwNDc5OTkwMjY2NjIxMTQ0MA.G1DPSP.zOV9Xx1uVkf-YKMKapL0TBSv4XdrmPtolyog8o') )
+loop.create_task(bot_ape.start('MTAwNDgwMDExMjczNzkxNDk1MQ.GERLh6.Ri5QCXT_LF-cPO7CU2mEeFciFwiOCh7O6K0zU0') )
+loop.create_task(bot_atom.start('MTAwNDgwMDIwMDIwNTkzMDUzNg.Gbo4kw.2Veuas3Gse05UjPtPIvh0BjxndUtWj5BQFSjxo'))
+loop.create_task(bot_avax.start('MTAwNDgwMDI5MzE3MjY5NTEyMA.Gz6sqS.5VfrPLfTzoyLDF53JXRM-9gx0j_wn1YD6k2LX4'))
+loop.create_task(bot_banano.start('MTAwNDg2NTMyNjgzNzY3ODEwMQ.Ge2PhG.Iq5y50IZQoDlzQrh2njA8HDs8vdrw5BB0i7e-M'))
+loop.create_task(bot_bch.start('MTAwNDgwMDM4ODYxODI2MDY3MQ.G3fxkN.12p5gItBuzH5FSw3WkRCLzs2CNvrx60sp2xrFk'))
+loop.create_task(bot_bitcoin.start('MTAwNDA1Mzk4MTU5NDY2NTExMQ.GKSZYA.e7fx1L0Z1ftGf4u4sP7EGLHev0sIqMRXzO-8OU'))
+loop.create_task(bot_bnb.start('MTAwNTMxNTEwNzQ3NzI2MjQzNw.GLZnWG.GLd7eNV-v0jwbOaN8V05NgssdHFeHceBI7KPFU'))
+loop.create_task(bot_cake.start('MTAwNDgwMDQ2NDk1ODc5MTc4MA.Gmzodl.1-jeQ72ozbwFG_gPKJkSlElESEF5Rsj9iUg-BU'))
+loop.create_task(bot_cardano.start('MTAwNDgwMDYxNTY4NTMxMjUzMg.GL501Y.uaHDrHgQ_ihMA2AHDghueCAGktwFHcW6tVxHWI'))
+loop.create_task(bot_chainlink.start('MTAwNDg1OTE4NDI2MjY5NzA3MQ.Ggpww7.EczSVIttVtUeX-T67QnTUh0reZFTpwI50lOebM'))
+loop.create_task(bot_cronos.start('MTAwNDg1OTI1NDA5Nzg0NjMwMw.GBfLd5.EM7rcuEKhWs0v5MWfax6T9wkH082gfOgAAKWa4'))
+loop.create_task(bot_dogecoin.start('MTAwNDg1OTMxMjQxNTQ0NTEyMw.G9spoS.kxbqFQsheaWrn3wElh5rWcSafxjahmmOm-RNvQ'))
+loop.create_task(bot_eos.start('MTAwNDg1OTM3MjIzODgxMTE3Nw.GNoxXx.5M-Y7zTZVBJiDcSilq9jrxNzKOlb4egfkB8SIE'))
+loop.create_task(bot_eth.start('MTAwNDc4NjU5Mjk3Nzc4NTAzMw.GrpyL6.HQ4_EhzXliRyuUhNKFdBjjNxitow2-ldlsZHHU'))
+loop.create_task(bot_litecoin.start('MTAwNDc5OTY2MjUyMTMyMzUzMA.GsBn8r.28WB0hZzW6T-X_hJdGcbaB3p1lQ2PxkRto7JKo'))
+loop.create_task(bot_mana.start('MTAwNDg1OTYzMzQ3NjgzNzQ3OA.GM4c-d.keXU8IR8Ut1SaUk41uH2yYmhjebf71GOy0s4-k'))
+loop.create_task(bot_matic.start('MTAwNDg1OTk1NDEzNTU4MDY4Mw.G-Od5Q.Rkz48CCLK9DJJQ5jp7GNF9QQ5hkiw0JWhKJU7E'))
+loop.create_task(bot_monero.start('MTAwNDg2MzAxNDI2NjIxNjUzOQ.GbAKyA.3zgJt5Jx9VlYW5w1GN7AR1YhTecSE0Sud06S_M'))
+loop.create_task(bot_polkadot.start('MTAwNDg3NDcxNjAzNDYzNzg1NA.Gkj8u0.XBDlhUbx9Mk3d2J-WaL75z5R27pORkE7DdHK_M'))
+loop.create_task(bot_sand.start('MTAwNDg3NTA2OTMxMjQ3NTEzNg.Gvf5QO.MOBXNiWS-qRIxTuEJPqS1uxs-Agnyr3uOcEn2M'))
+loop.create_task(bot_solana.start('MTAwNDg3NTkxMDkxMjE1OTg2NA.GXg0zy.d8nsRMTJ5mkAvxhEiYyvHeCVYMa6tRZywg0EhM'))
+loop.create_task(bot_tezos.start('MTAwNDg3NjAzNzIyMzYzMjk5Nw.G1lhU7.XHKBCBMbMy_T9nJVEisP2bEnHmMOaZ09SLFuIU'))
+loop.create_task(bot_trx.start('MTAwNDg3NjQwODU5OTg4NzkxMg.G9KUdp.f1dRQeVUtWUL0r-a0TIqrMlCDn_z7bBhwZTdH8'))
+loop.create_task(bot_uniswap.start('MTAwNDg3NjU1MDA2MTE2MjYxNg.GrLvQL.SBAV8_C03Vd4pDRXPWmFVvwlDjJpv2m0iuBrpE'))
+loop.create_task(bot_xlm.start('MTAwNDg3Njc5Nzk1NzExMTgyOA.GtrCJL.oJ7Fb8PBd03LG0WK0Zh2F3-skLvR0PNfzwPmf0'))
+loop.create_task(bot_xrp.start('MTAwNDg3Njg4NDA0NTIxMzc2Nw.Gv7IaV.45cuX0bDuTTS_oFutpbJei-Ppk3jH1AZnNaC_8'))
+loop.create_task(bot_nano.start('MTAyMjgwNjkzMzQxNTE0OTY2MA.GYtk4Z.fpncfSprXv5PnZ06HQKM_Hm6k4WoXCM4vhJcqQ'))
+loop.create_task(bot_bat.start('MTAyNDI0ODU0NDkzNDI1MjYxNA.Gq7UsR.vk5v2lp62p79VpE70O-Gfnx1Wg5MwGBxekDL_w'))
+loop.create_task(bot_kaspa.run('MTAyMTAwMzcyNTA1OTM5NTU4NQ.GEj8yu.NNOvuZM1eR7bt5sT1PvdaaTeRa7EznDWDiwEJ0'))
+loop.run_until_complete()
