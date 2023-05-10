@@ -55,7 +55,7 @@ for i in range(number_of_bots):
     bot_info.update({bots[i]:{"Change":0,"Mcap":0,"Dailyvol":0,"Up_or_down":"","a1":"","a2":"","a3":"","Arrow":"","old_price":[0,0],"new_price":0}})
 
 
-changing_nick_in_time = 100
+
 
 ids=["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin","pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
 #y = cg.get_price(ids=ids, vs_currencies='usd', include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
@@ -278,6 +278,7 @@ async def all_changes():
 async def all_changes():
     schedule.every().minute.do(fetching_status)
     schedule.every().minute.do(start)
+    changing_nick_in_time = 100
     while True:
          changing_nick_in_time -=1
          if changing_nick_in_time == 0:
