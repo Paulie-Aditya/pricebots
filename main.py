@@ -441,9 +441,6 @@ async def all_changes():
              changing_nick_in_time +=100
 
 
-
-
-
 @bot_algo.event
 async def on_ready():
     fetching_status()
