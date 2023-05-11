@@ -93,7 +93,7 @@ def start():
         if float(crypto["old_price"][-1]) < float(crypto["new_price"]):
             crypto["Arrow"] = "(↗)"
         elif float(crypto["old_price"][-1]) > float(crypto["new_price"]):
-            _crypto["Arrow"] = "(↘)"
+            crypto["Arrow"] = "(↘)"
         if len(crypto["old_price"])>50:
             crypto["old_price"] = [0]
 
