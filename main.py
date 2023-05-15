@@ -266,7 +266,7 @@ async def all_changes():
 
              await asyncio.sleep(1)
              schedule.run_pending()
-             changing_nick_in_time +=100
+             changing_nick_in_time +=200
 
 
 @bot_algo.event
