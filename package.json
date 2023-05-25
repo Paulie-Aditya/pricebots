@@ -1,0 +1,24 @@
+{
+  "name": "pricebots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paulie-Aditya/pricebots.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paulie-Aditya/pricebots/issues"
+  },
+  "homepage": "https://github.com/Paulie-Aditya/pricebots#readme",
+  "dependencies": {
+    "discord-interactions": "^3.4.0",
+    "itty-router": "^3.0.12"
+  }
+}

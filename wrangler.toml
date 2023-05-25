@@ -1,0 +1,8 @@
+compatibility_date = "2022-02-26"
+main = "./src/index.ts"
+name = "pricebots"
+
+workers_dev = true
+
+[triggers]
+crons = ["*/10 * * * *"]
