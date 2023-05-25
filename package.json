@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Paulie-Aditya/pricebots#readme",
   "dependencies": {
+    "discord-interactions": "^3.4.0",
     "itty-router": "^3.0.12"
   }
 }
