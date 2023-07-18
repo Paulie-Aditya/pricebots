@@ -44,10 +44,10 @@ bot_bat = commands.Bot()
 bots = [bot_algo, bot_ape, bot_atom, bot_avax, bot_banano, bot_bch, bot_bitcoin, bot_bnb, bot_cake, bot_cardano, bot_chainlink, bot_cronos, bot_doge, bot_eos, bot_eth, bot_ltc,bot_mana, bot_matic, bot_monero, bot_polkadot, bot_sand, bot_sol,bot_tezos, bot_trx, bot_uniswap, bot_xlm, bot_xrp, bot_kaspa, bot_nano, bot_bat]
 coins = ["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bitcoin","binancecoin", "pancakeswap-token","cardano","chainlink","crypto-com-chain","dogecoin","eos","ethereum","litecoin","decentraland","matic-network","monero","polkadot","the-sandbox","solana","tezos","tron","uniswap","stellar","ripple","kaspa", "nano", "basic-attention-token"]
 
-info = cg.get_price(ids = coins, vs_currencies="usd", include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
 
 
 async def start(bot, coin):
+    info = cg.get_price(ids = coins, vs_currencies="usd", include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
     price = info[coin]["usd"]
     mcap = f'Market Cap: ${(round(int(info[coin]["usd_market_cap"]),0)):,}'
     vol = f'24h Vol: ${(round(int(info[coin]["usd_24h_vol"]),0)):,}'
