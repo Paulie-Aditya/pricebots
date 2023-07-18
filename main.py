@@ -51,7 +51,7 @@ async def start(bot, coin):
     price = info[coin]["usd"]
     mcap = f'Market Cap: ${(round(int(info[coin]["usd_market_cap"]),0)):,}'
     vol = f'24h Vol: ${(round(int(info[coin]["usd_24h_vol"]),0)):,}'
-    change = f'24h Change: {round(float(info[coin]["usd_24h_change"]),4)}%'
+    change = f'24h Change: {round(float(info[coin]["usd_24h_change"]),3)}%'
     
     try:
         if coin == 'kaspa':
