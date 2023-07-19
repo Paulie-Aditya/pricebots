@@ -75,6 +75,7 @@ async def do():
         for count in range(len(bots)):
             await start(bots[count],coins[count])
         await asyncio.sleep(3*60)
+        continue
     
 
 #last bot only
