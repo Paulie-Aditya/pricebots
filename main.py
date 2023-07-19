@@ -45,7 +45,7 @@ coins = ["algorand","apecoin","cosmos","avalanche-2","banano","bitcoin-cash","bi
 info = cg.get_price(ids = coins, vs_currencies="usd", include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
 
 
-async def start(bot, coin):
+async def start(bot, coin, info=info):
     price = info[coin]["usd"]
     mcap = f'Market Cap: ${(round(int(info[coin]["usd_market_cap"]),0)):,}'
     vol = f'24h Vol: ${(round(int(info[coin]["usd_24h_vol"]),0)):,}'
@@ -69,12 +69,14 @@ async def start(bot, coin):
             pass
     
 
-async def do():    
-    while True:
+async def do():
+    async def again():
         info = cg.get_price(ids = coins, vs_currencies="usd", include_market_cap=True, include_24hr_vol=True, include_24hr_change=True)
         for count in range(len(bots)):
-            await start(bots[count],coins[count])
+            await start(bots[count], coins[count],info)
+    while True:
         await asyncio.sleep(3*60)
+        await again()
         continue
     
 
