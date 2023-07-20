@@ -33,7 +33,7 @@ async def start(bot, coin):
 
     await bot.change_presence(activity = nextcord.Activity(type = nextcord.ActivityType.watching, name = f'{random.choice([liq,vol,change])}'))
 
-    if coin != 'pxa':
+    if coin in ['rht']:
         if info_json["price_24h_delta_usd"]<0:
             arrow = "(↘)"
         else:
@@ -44,7 +44,7 @@ async def start(bot, coin):
             except nextcord.errors.Forbidden:
                 pass
 
-    elif coin == 'pxa':
+    elif coin in ['pxa']:
         xrp_contract_address = "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe"
         xrp_api_url = f'https://api.dev.dex.guru/v1/chain/56/tokens/{xrp_contract_address}/market/?api-key={config.dex_guru_api_key}'
         xrp_webUrl = urllib.request.urlopen(xrp_api_url)
