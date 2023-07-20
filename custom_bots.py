@@ -39,7 +39,10 @@ async def start(bot, coin):
         else:
             arrow = "(↗)"
         for guild in bot.guilds:
-            await guild.get_member(int(bot.user.id)).edit(nick = f'{"$"}{price} {arrow}') 
+            try:
+                await guild.get_member(int(bot.user.id)).edit(nick = f'{"$"}{price} {arrow}') 
+            except nextcord.errors.Forbidden:
+                pass
 
     elif coin == 'pxa':
         xrp_contract_address = "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe"
@@ -56,7 +59,10 @@ async def start(bot, coin):
         nickname = f'${price} / {exchange_rate} XRP'
 
         for guild in bot.guilds:
-            await guild.get_member(int(bot.user.id)).edit(nick = nickname) 
+            try:
+                await guild.get_member(int(bot.user.id)).edit(nick = nickname) 
+            except nextcord.errors.Forbidden:
+                pass
     
 
 async def do():
