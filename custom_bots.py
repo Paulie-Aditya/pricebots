@@ -70,10 +70,9 @@ async def do():
         for count in range(len(bots)):
             await start(bots[count], coins[count])
     while True:
-        await asyncio.sleep(5*60)
         await again()
+        await asyncio.sleep(5*60)
         continue
-
 
 
 #last bot
