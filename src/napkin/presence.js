@@ -1,11 +1,9 @@
 import WebSocket from "ws";
-import phin from "phin";
 import after from "after";
 
 /**
   * Napkin.io function that connects to discord gateway to update the presence for the bots
   * Discord blocks cloudflare workers from accessing their gateway for some reason :skull:
-  * TODO: Check which bot to update presence of from url search params
   * TODO: Add Authorization header checks to prevent this endpoint being spammed if the url gets leaked
   * @param {NapkinRequest} req
   * @param {NapkinResponse} res
@@ -13,7 +11,9 @@ import after from "after";
   * @ps I was told to put hartbeat instead of heartbeat
 */
 export default (req, res) => new Promise(async resolve => {
-  if (req.query?.ticker != "bitcoin") return resolve(res.status(400).json({ error: "TODO: support other tickers" }));
+  let { ticker, coinData } = req.query || {};
+  if (!ticker || !coinData) return resolve(res.status(400).json({ error: "Malformed URL" }));
+  coinData = JSON.parse(coinData);
 
   const ops = {
     READY: 0,
@@ -22,10 +22,6 @@ export default (req, res) => new Promise(async resolve => {
     HELLO: 10,
     HARTBEAT_ACK: 11
   };
-  const { body: { bitcoin: coinData } } = await phin({
-    url: "https://api.coingecko.com/api/v3/simple/price?vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true&precision=4&ids=bitcoin",
-    parse: "json"
-  });
   const next = after(3, err => resolve(err ? res.status(500).json({ error: err.message }) : res.status(200).json({ success: true })));
 
   const
@@ -42,9 +38,8 @@ export default (req, res) => new Promise(async resolve => {
   ws.addEventListener("message", ({ data }) => {
     data = JSON.parse(data);
     s = data.s;
-    let { t, s, op, d } = data;
 
-    switch (op) {
+    switch (data.op) {
       case ops.HARTBEAT:
       case ops.HELLO:
         got("hello/hartbeat");
@@ -60,7 +55,7 @@ export default (req, res) => new Promise(async resolve => {
           `24h Change: ${coinData.usd_market_cap.toFixed(3)}%`
         ][Math.floor(Math.random() * 3)];
         send(2, {
-          token: process.env.TOKEN_BTC,
+          token: process.env[`TOKEN_${ticker.toUpperCase()}`],
           properties: {
             os: "code913 has a cute blåhaj",
             browser: "napkin.io",
@@ -71,7 +66,7 @@ export default (req, res) => new Promise(async resolve => {
             afk: false,
             activities: [{
               name: presence,
-              type: 0
+              type: 3
             }]
           },
           intents: 0
