@@ -5,10 +5,11 @@ import tickers from "./tickers.js";
 /**
  * Cloudflare worker that periodically pings the napkin function to update presence and also sets guild nicknames for the bots
  * Napkin's cron scheduler currently only supports >hourly, that's why this worker is used to ping it
- * TODO: Move the getData function into its own napkin function, so scraperapi is no longer needed
  */
 async function cronHandler(env) {
-	const data = await getData([...tickers.keys()]);
+	let coinDataFunc = new URL(env.NAPKIN_COINDATA_FUNCTION_URL);
+	coinDataFunc.searchParams.append("tickers", [ ...tickers.keys() ].join(","));
+	const data = await fetch(coinDataFunc).then(r => r.json());
 	let promises = [];
 
 	for (let [ticker, displayName] of tickers.entries()) {
@@ -20,11 +21,11 @@ async function cronHandler(env) {
 		}
 		if (!data[ticker]) continue;
 		promises.push(setNick(data[ticker], token));
-		const napkin = new URL(env.NAPKIN_FUNCTION_URL);
-		napkin.searchParams.append("ticker", ticker);
-		napkin.searchParams.append("coinData", JSON.stringify(data[ticker]));
-		console.log(napkin.href);
-		promises.push(fetch(napkin));
+		const presenceFunc = new URL(env.NAPKIN_PRESENCE_FUNCTION_URL);
+		presenceFunc.searchParams.append("ticker", ticker);
+		presenceFunc.searchParams.append("coinData", JSON.stringify(data[ticker]));
+		console.log(presenceFunc.href);
+		promises.push(fetch(presenceFunc));
 	}
 
 	return await Promise.all(promises);
@@ -39,7 +40,7 @@ router.get("/cron", async (_, env) => {
 	await cronHandler(env);
 
 	return new Response("set nicks");
-})
+});
 router.post("/interactions", _ => {
 	return new Response(JSON.stringify({
 		type: InteractionResponseType.PONG
@@ -49,23 +50,6 @@ router.post("/interactions", _ => {
 		},
 	});
 });
-
-/**
- * Garbage data for now
- * @see the comment at the top of this file
- */
-async function getData(tickers) {
-	let data = {}, garbage = Math.random() * 696969;
-	for (const ticker of tickers)
-		data[ticker] = {
-			usd: garbage,
-			usd_market_cap: garbage,
-			usd_24h_vol: garbage,
-			usd_24h_change: garbage,
-			last_updated_at: garbage
-		};
-	return data;
-}
 
 // https://github.com/code913/snippets/blob/main/discord/fetch.js
 const dapi = (path, token, method = "GET", body, parse = true) => fetch(`https://discord.com/api/v10/${path}`, {
@@ -85,7 +69,6 @@ async function setNick(data, token) {
 		if ((BigInt(permissions) & CHANGE_NICKNAME) !== (CHANGE_NICKNAME)) continue;
 
 		await dapi(`guilds/${id}/members/@me`, token, "PATCH", {
-			// f"{"$"}{bot_info[curr]["new_price"]}{" "}{bot_info[curr]["Arrow"]}")
 			nick: `$${data.usd} (${data.usd_24h_change > 0 ? "↗" : "↘"})`
 		}, false);
 	}

@@ -1,3 +1,4 @@
+// Change this based on your preferences
 export default new Map([
 	["algorand", "Algo"],
 	["apecoin", "Ape"],
