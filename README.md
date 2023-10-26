@@ -7,13 +7,14 @@ Setup:
 1. Paste everything from the file src/napkin/presence.js in this github repository into it.
 1. Press the deploy button.
 1. Go to the Other tab, scroll down and set bot tokens as environment variables for each of the currencies mentioned in the src/tickers.js file.
+1. Create another function from the file src/napkin/coindata.js (you don't need to set bot tokens for this one) and deploy. **Remember the URLs of both the napkin functions**.
 1. Install nodejs.
 1. Create a cloudflare account (no credit card required).
 1. Install wrangler with `npm i -g wrangler`.
 1. Login to wrangler with `wrangler login`.
 1. Clone this repository and `cd` into it.
 1. Set the following environment variables using the `wrangler secret put VARIABLE_NAME` command:
-    - The URL of the napkin function you just deployed as `NAPKIN_FUNCTION_URL`
+    - The URL of the napkin functions you just deployed as `NAPKIN_PRESENCE_FUNCTION_URL` and `NAPKIN_COINDATA_FUNCTION_URL`
     - Discord bot tokens and their application public keys for each of the currencies mentioned in the src/tickers.js file.
 1. Run `wrangler deploy`
 1. Copy the returned deployment url (it should look like `pricebots.code913.workers.dev`)
