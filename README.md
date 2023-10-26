@@ -1,5 +1,5 @@
 # pricebots
-Written in python by Paulie, being rewritten in javascript by [code913](https://code913.devpage.me) for cloudflare workers.
+Written in python by Paulie, being rewritten in javascript by [code913](https://code913.devpage.me) for [napkin.io](https://napkin.io).
 
 Setup:
 1. Install nodejs.
