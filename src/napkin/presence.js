@@ -13,6 +13,8 @@ import after from "after";
   * @ps I was told to put hartbeat instead of heartbeat
 */
 export default (req, res) => new Promise(async resolve => {
+  if (req.query?.ticker != "bitcoin") return resolve(res.status(400).json({ error: "TODO: support other tickers" }));
+
   const ops = {
     READY: 0,
     HARTBEAT: 1,
@@ -60,9 +62,9 @@ export default (req, res) => new Promise(async resolve => {
         send(2, {
           token: process.env.TOKEN_BTC,
           properties: {
-            os: "blahaj",
-            browser: "napkin",
-            device: "napkin"
+            os: "code913 has a cute blåhaj",
+            browser: "napkin.io",
+            device: "napkin.io"
           },
           presence: {
             status: "online",

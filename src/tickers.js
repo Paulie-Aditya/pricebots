@@ -1,4 +1,4 @@
-export const tickers = new Map([
+export default new Map([
 	["algorand", "Algo"],
 	["apecoin", "Ape"],
 	["cosmos", "Atom"],

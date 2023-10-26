@@ -1,8 +1,8 @@
 compatibility_date = "2022-02-26"
-main = "./src/index.ts"
+main = "./src/cf.js"
 name = "pricebots"
 
 workers_dev = true
 
 [triggers]
-crons = ["*/10 * * * *"]
+crons = ["*/1 * * * *"]
