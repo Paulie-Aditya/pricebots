@@ -49,9 +49,10 @@ export default (req, res) => new Promise(async resolve => {
       case ops.HARTBEAT_ACK:
         got("hartbeat ack");
         put("identify");
+        const f = n => new Intl.NumberFormat("en-US").format(n);
         const presence = [
-          `Market Cap: $${Math.round(coinData.usd_market_cap)}`,
-          `24h Vol: $${Math.round(coinData.usd_24h_vol)}`,
+          `Market Cap: $${f(Math.round(coinData.usd_market_cap))}`,
+          `24h Vol: $${f(Math.round(coinData.usd_24h_vol))}`,
           `24h Change: ${(100 * ((coinData.usd + coinData.usd_24h_change) / coinData.usd - 1)).toFixed(2)}%`
         ][Math.floor(Math.random() * 3)];
         send(2, {
