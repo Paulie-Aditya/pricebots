@@ -5,4 +5,4 @@ name = "pricebots"
 workers_dev = true
 
 [triggers]
-crons = ["*/1 * * * *"]
+crons = ["*/5 * * * *"]
