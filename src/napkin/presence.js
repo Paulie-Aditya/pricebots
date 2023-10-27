@@ -52,7 +52,7 @@ export default (req, res) => new Promise(async resolve => {
         const presence = [
           `Market Cap: $${Math.round(coinData.usd_market_cap)}`,
           `24h Vol: $${Math.round(coinData.usd_24h_vol)}`,
-          `24h Change: ${coinData.usd_market_cap.toFixed(3)}%`
+          `24h Change: ${(100 * coinData.usd / (coinData.usd - coinData.usd_24h_change)).toFixed(3)}%`
         ][Math.floor(Math.random() * 3)];
         send(2, {
           token: process.env[`TOKEN_${ticker.toUpperCase()}`],
