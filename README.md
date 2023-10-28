@@ -1,5 +1,5 @@
 # pricebots
-Written in python by Paulie, being rewritten in javascript by [code913](https://code913.devpage.me) for [napkin.io](https://napkin.io). Stuff may break because everything is being committed to the main branch.
+Written in python by Paulie, being rewritten in javascript by [code913](https://code913.devpage.me) for [napkin.io](https://napkin.io) and [cloudflare workers](https://workers.cloudflare.com). Stuff may break because everything is being committed to the main branch.
 
 Setup:
 1. Create a napkin.io account (no credit card required).
