@@ -73,6 +73,6 @@ loop.create_task(bot_eth.start(config.eth_token))
 loop.create_task(bot_ltc.start(config.ltc_token))
 loop.create_task(bot_matic.start(config.matic_token))
 loop.create_task(bot_sol.start(config.solana_token))
-loop.create_task(bot_kaspa.start(config.kaspa_token))
+loop.create_task(bot_kaspa.run(config.kaspa_token))
 loop.run_until_complete()
 
