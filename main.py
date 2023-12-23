@@ -74,7 +74,5 @@ loop.create_task(bot_ltc.start(config.ltc_token))
 loop.create_task(bot_matic.start(config.matic_token))
 loop.create_task(bot_sol.start(config.solana_token))
 loop.create_task(bot_kaspa.start(config.kaspa_token))
-loop.create_task(bot_nano.start(config.nano_token))
-loop.create_task(bot_bat.run(config.bat_token))
 loop.run_until_complete()
 
